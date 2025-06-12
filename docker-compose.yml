@@ -4,9 +4,9 @@ services:
     ports:
       - "4566:4566"
     environment:
-      - SERVICES=s3,lambda,dynamodb
+      - SERVICES=s3,lambda,dynamodb,iam
       - DEBUG=1
       - DATA_DIR=/tmp/localstack/data
     volumes:
-      - "./localstack:/etc/localstack/init/ready.d"  # executa setup.sh ao iniciar
+      - "./localstack:/etc/localstack/init/ready.d"
       - "/var/run/docker.sock:/var/run/docker.sock"
