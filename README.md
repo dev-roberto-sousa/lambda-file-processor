@@ -35,10 +35,6 @@ Este projeto simula um fluxo da AWS usando o [LocalStack](https://github.com/loc
 
 A função Lambda será automaticamente acionada e irá salvar metadados no DynamoDB.
 
-## Sobre IAM
-
-Mesmo que o LocalStack não valide permissões reais, a role IAM atribuída (`arn:aws:iam::000000000000:role/lambda-role`) é exigida na criação da função Lambda para simular o ambiente da AWS.
-
 ## Estrutura do projeto
 
 ```
@@ -66,7 +62,7 @@ Mesmo que o LocalStack não valide permissões reais, a role IAM atribuída (`ar
   aws --endpoint-url=http://localhost:4566 lambda list-functions
   ```
 
-- Ver logs (se configurado):
+- Ver logs:
   ```bash
   aws --endpoint-url=http://localhost:4566 logs describe-log-groups
   ```
